@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from .base_page import BasePage
-from .locators import MainPageLocators
+from .locators import MainPageLocators, LoginPageLocators
 
 
 class LoginPage(BasePage):
@@ -15,8 +15,8 @@ class LoginPage(BasePage):
 
     def should_be_login_form(self):
 
-        assert self.is_element_present(*MainPageLocators.LOGIN_FORM) , 'login_form not found'
+        assert self.is_element_present(*LoginPageLocators.LOGIN_FORM) , 'login_form not found'
 
     def should_be_register_form(self):
 
-        assert self.is_element_present(*MainPageLocators.REGISTER_FORM), 'register_form not found'
+        assert self.is_element_present(*LoginPageLocators.REGISTER_FORM), 'register_form not found'
